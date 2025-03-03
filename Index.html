@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartes des Fleurs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--le bouton pour l'info-->
+
+  <!--petit audio pour le thème, il est 22:08-->
+
+  <audio id="audio" autoplay loop>/
+    <source src="Great Fairys Fountain Violin_Piano Cover - The Legend of Zelda.mp3" type="audio/mpeg">
+    Votre navigateur ne prend pas en charge l'élément audio.
+  </audio>
+
+  <button id="btn_mosaique">
+    Mosaique
+  </button>
+
+  <button id="btn_carrousel">
+    Carrousel
+  </button>
+
+  <section id="card_container" class="mosaique">
+  </section>
+
+  <script src="script.js">
+    window.onload = function () {
+      document.getElementById('audio').play();
+    };
+  </script>
+
+  <script src="script.js"></script>
+
+</html>
+
+</body>
+
+

@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*ici c le corps oublie pas*/
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1524835391568-32c8f7016d73?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+ 
+/*Partie mosaique*/
+.mosaique {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/*Partie caroussel*/
+.carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 5px;
+  background: #ffecf2;
+  box-shadow: 2px 4px 10px hsl(0, 0%, 100%);
+  overflow: hidden;
+  transform: rotate3D(0,1,0,10deg);
+}
+
+.card.closed {
+  width: 300px;
+  height: 120px;
+  display: flex;
+}
+
+.card.closed .properties {
+  display: none;
+}
+
+.card.opened .properties {
+  display: block;
+}
+
+.card.opened {
+  width: 300px;
+  height: 500px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #f5deb3;
+}
+
+/*image carte ouverte*/
+.card.opened img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  background-color: rgb(255, 176, 185);
+}
+
+/*image carte fermé*/
+.card.closed img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+  background-color: rgb(245, 179, 189);
+}
+
+.card .info {
+  padding: 20px;
+}
+
+.card .info h3 {
+  margin: 20;
+  font-size: 20px;
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: "Trattatello, fantasy";
+  font-style: italic;
+}
+
+.card .info p {
+  margin: 5px 0 0;
+  color: #000000;
+  text-align: left;
+}
+
+.fleur-container {
+  position: relative;
+}
+
+.fleur {  
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.9s ease;
+  /* c encore censé etre une transition pour un effet */
+}
+
+button {
+  display: fixed;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  background-color: #f6b4c8;
+  font-size: 1rem;
+  z-index: 2;
+}
